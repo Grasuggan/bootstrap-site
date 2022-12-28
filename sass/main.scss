@@ -3,10 +3,16 @@ $primary: #005eb8;
 $secondary: #003B5C;
 $light: #EDEDED;
 
+$border-radius: 0px;
+
+$nav-link-color: #ffffff; 
+
 
 //Import the functions & variables
+
 @import "../node_modules/bootstrap/scss/_functions";
 @import "../node_modules/bootstrap/scss/_variables";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
 // Add new color map to add more colors to the theme-colors color map in _variables.scss
 $custom-theme-colors: (
@@ -35,9 +41,34 @@ section{
   nav > .container-fluid{
     height: 100%;
   }
-  .navbar-toggler{
+  .nav-buttons {
+    height: 100%;
+    display: flex;
+  }
+  .nav-buttons button{
     height: 100%;
   }
-  .navbar-toggler > span{
-    width: auto;
+  .navbar-toggler span{
+    display: none;
   }
+  .navbar-toggler span.show{
+    display: flex;
+    align-items: center;
+  }
+  .navbar-toggler span small{
+    font-size: .875rem!important;
+  }
+  .navbar-toggler:focus{
+    box-shadow: none;
+  }
+.navbar-nav.text-white .nav-link{
+    color:inherit;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-item{
+     border-bottom: 1px solid rgba(225,225,225,.2);
+}
+.nav-item:last-child{
+    border-bottom: none;
+}

@@ -9,23 +9,51 @@
 </head>
   <body>
     <nav class="navbar bg-light fixed-top p-0">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+      <div class="container-fluid p-0">
+        <a class="navbar-brand ms-5" href="#">
           <img src="/assets/logo.svg" alt="Logo" class="img-fluid">
         </a>
+
+        <div class="nav-buttons">
+        <button class="btn btn-primary nav-search-btn" type="button"><i class="bi bi-search"></i> <small class="ps-1">Search</small></button>
         <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-          <span class="text-white"><i class="bi bi-list"></i> Meny</span>
+          <span class="text-white show"><i class="bi bi-list"></i> <small class="ps-1">Meny</small></span>
+          <span class="text-white"><i class="bi bi-x-circle"></i> <small class="ps-1">Stäng</small></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-body bg-secondary">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <div class="offcanvas-body bg-secondary p-0">
+            <ul class="navbar-nav text-white justify-content-end flex-grow-1 py-4">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active ps-5 pe-4 py-3" aria-current="page" href="#">Start <i class="bi bi-chevron-right"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link ps-5 pe-4 py-3" href="#">Förskola <i class="bi bi-chevron-right"></i></a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item">
+                <a class="nav-link ps-5 pe-4 py-3" href="#">Uppleva & göra <i class="bi bi-chevron-right"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-5 pe-4 py-3" href="#">Stöd & omsorg <i class="bi bi-chevron-right"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-5 pe-4 py-3" href="#">Trafik & miljö <i class="bi bi-chevron-right"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-5 pe-4 py-3" href="#">Bygga & bo <i class="bi bi-chevron-right"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-5 pe-4 py-3" href="#">Företagare <i class="bi bi-chevron-right"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-5 pe-4 py-3" href="#">Jobba <i class="bi bi-chevron-right"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-5 pe-4 py-3" href="#">Kommun & politik <i class="bi bi-chevron-right"></i></a>
+              </li>
+              <li class="nav-item contact-nav-item">
+                <a class="nav-link ps-5 pe-4 py-3" href="#">Kontakta oss <i class="bi bi-box-arrow-up-right"></i></a>
+              </li>
+              <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
                 </a>
@@ -37,21 +65,24 @@
                   </li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-              </li>
+              </li> -->
             </ul>
-            <form class="d-flex mt-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </div>
+
+      </div>
     </nav>
-    <section>
+ 
     <!-- Heading tags -->
-    <h1 class="text-primary">Mellerud h1! <i class="bi bi-list"></i></h1>
+
+    <section>
+    <div class="container">
+    <h1 class="text-primary">Mellerud h1!</h1>
     <h2 class="text-bg-primary">Mellerud h2!</h2>
     <h3 class="text-bg-altdark">Mellerud h3!</h3>
+  </div>
+  </section>
 
     
 
@@ -59,5 +90,6 @@
 </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
   </body>
 </html>
