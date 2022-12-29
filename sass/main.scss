@@ -17,7 +17,8 @@ $nav-link-color: #ffffff;
 // Add new color map to add more colors to the theme-colors color map in _variables.scss
 $custom-theme-colors: (
     "altlight": #f2ebfa,
-    "altdark": #522192
+    "altsecondary": #BE84A3,
+    "altwhite": #ffffff,
 );
 
 //Merge out custom colors map with the original theme colors map 
@@ -27,12 +28,24 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 section{
-    padding: 80px 0;
+    padding: 70px 0;
 }
+
+//Navigation
 .navbar{
     height: 70px;
 }
+.navbar.fixed-top{
+  top:70px;
+   transition: all .08s ease-in-out;
+}
+.scroll .navbar.fixed-top{
+  top:0;
+}
 #offcanvasNavbar {
+    top: 140px;
+  }
+  .scroll #offcanvasNavbar {
     top: 70px;
   }
   nav .offcanvas-backdrop.show{
@@ -47,6 +60,9 @@ section{
   }
   .nav-buttons button{
     height: 100%;
+  }
+  .navbar-toggler:focus-visible{
+    outline: auto;
   }
   .navbar-toggler span{
     display: none;
@@ -71,4 +87,109 @@ section{
 }
 .nav-item:last-child{
     border-bottom: none;
+}
+.nav-item:hover .nav-link{
+  opacity: .6;
+}
+.nav-link.active{
+  font-weight: bolder;
+}
+.pre-top .navbar-nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+.pre-top .nav-item .nav-link {
+  color: $primary;
+}
+
+//Hero
+section.hero-section .bg-image{
+  min-height: calc(100vh - 140px);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+section.hero-section .input-group{
+  justify-content: center;
+}
+section.hero-section #search-autocomplete {
+  display: flex;
+  align-items: center;
+  width: 310px;
+  position: relative;
+}
+section.hero-section #search-autocomplete .autoComplete_wrapper {
+  width: 100%;
+}
+section.hero-section #search-autocomplete .autoComplete_wrapper #autoComplete {
+  height: 55px;
+  border-radius: 30px;
+  padding-left: 1.76rem;
+  z-index: 3;
+position: relative;
+border-color: transparent;
+}
+section.hero-section #search-autocomplete .autoComplete_wrapper #autoComplete:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+section.hero-section .input-group #search-autocomplete .btn{
+  position: absolute;
+  right: 9px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  top: 8px;
+  z-index: 4;
+}
+section.hero-section .input-group #search-autocomplete .btn i{
+  color: #ffffff;
+}
+section.hero-section .input-group #autoComplete_list_1{
+  display: flex;
+background: white;
+color: black;
+list-style: none;
+flex-flow: column;
+align-items: flex-start;
+padding: 3.5rem 1rem 1rem;
+top: 0;
+position: absolute;
+width: 310px;
+left: 50%;
+transform: translateX(-50%);
+border-radius: 30px;
+z-index: 2;
+}
+section.hero-section .input-group #autoComplete_list_1 li {
+  padding: .5rem 1rem;
+  width: 100%;
+  text-align: left;
+}
+section.hero-section .input-group #autoComplete_list_1 li:first-child{
+  border-top: 1px solid black;
+}
+section.hero-section .input-group #autoComplete_list_1 a {
+  text-decoration: none;
+  color: black;
+}
+.btn-altwhite:hover{
+  background-color: rgba(250, 250, 250, .95);
+}
+.hero-btn-group{
+  flex-wrap:wrap;
+}
+@media only screen and (max-width: 992px){
+  .hero-btn-group .btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000000;
+  }
+  .hero-btn-group .btn:last-child{
+    border-bottom: none;
+  }
 }
