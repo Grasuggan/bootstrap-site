@@ -115,6 +115,9 @@ section.hero-section .bg-image{
   min-height: calc(100vh - 140px);
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+justify-content: center;
+align-items: center;
 
 }
 section.hero-section .input-group{
@@ -318,3 +321,92 @@ font-size: 14px;
   background-color: white;
 }
 
+//Calendarium
+.calendar {
+  margin-top: 1rem;
+}
+.calendar a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 20px;
+  color: inherit;
+}
+
+.calendar__date-box {
+  display: block;
+  background: #BE84A3;
+  padding: 1rem 1.2rem 1.5rem;
+  border-radius: 0 0 40px 40px;   
+  font-size: 1.3rem;
+  color: white;
+}
+.calendar__date-box span {
+  display: block;
+  text-align: center;
+}
+.calendar__date-box span:first-child {
+  font-weight: bold;
+  line-height: 1;
+}
+.calendar .list-group-item {
+  padding: 1rem;
+}
+.calendar__date{
+  margin-right: 5px;
+}
+.calendar__date i, .calendar__place i{
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: currentcolor;
+  margin-right: 5px;
+}
+.list-group-flush.calendar > .list-group-item:last-child {
+  border-bottom-width: 1px;
+}
+
+//Footer
+footer {
+  display: block;
+  width: 100%;
+  min-height: 500px;
+  height: fit-content;
+}
+footer .bg-image {
+  height: 100%;
+}
+footer .footer-inner {
+  height: 100%;
+  padding: 70px 0;
+}
+footer .list-group li{
+  border: none;
+  background: transparent;
+  padding: .4rem 0;
+  font-size: 1.2rem;
+}
+footer .list-group a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+footer .list-group li a:hover{
+  opacity: .8;
+}
+footer .list-group li i.bi-arrow-right-circle{
+  font-size: 24px;
+  margin-right: 15px;
+}
+footer .footer-text-block p{
+  font-size: 1.2rem;
+}
+.footer-logo{
+  display: flex;
+}
+footer .list-group li img{
+  margin-right: 15px;
+}
+footer .list-group li i.bi-box-arrow-up-right{
+  margin-left: 15px;
+}
