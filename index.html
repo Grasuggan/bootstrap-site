@@ -31,7 +31,18 @@
         </a>
 
         <div class="nav-buttons">
-        <button class="btn btn-primary nav-search-btn  px-4" type="button" title="Sök"><i class="bi bi-search" aria-hidden="true"></i> <small class="ps-1">Sök</small></button>
+
+          <div class="input-group input-nav">
+            <div id="search-autocomplete" class="form-outline">
+              <input type="search" id="autoComplete-nav" class="form-control" autocomplete="off" placeholder="Sök"/>
+              <!-- <label class="form-label" for="autoComplete-nav">Search</label>  -->
+              <button class="btn btn-primary nav-search-btn  px-4" type="button" title="Sök"><i class="bi bi-search" aria-hidden="true"></i> <small class="ps-1">Sök</small></button>
+            </div>
+          </div>
+        
+
+
+
         <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" title="Öppna och stäng navigerings meny">
           <span class="text-white show"><i class="bi bi-list" aria-hidden="true"></i> <small class="ps-1">Meny</small></span>
           <span class="text-white"><i class="bi bi-x-circle" aria-hidden="true"></i> <small class="ps-1">Stäng</small></span>
@@ -123,13 +134,13 @@
               <div>
               <h3 class="card-title fw-bold mb-2">Förskola & skola</h3>
               <ul class="list-unstyled">
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1">Kategori 1</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2">Kategori 2</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3">Kategori 3</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4">Kategori 4</a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1"><span>Kategori 1</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2"><span>Kategori 2</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3"><span>Kategori 3</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4"><span>Kategori 4</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
               </ul>
             </div>
-              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla">Se alla<i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla"><span>Se alla</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
@@ -141,15 +152,15 @@
               <div>
               <h3 class="card-title fw-bold mb-2">Uppleva & göra</h3>
               <ul class="list-unstyled">
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1">Kategori 1</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2">Kategori 2</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3">Kategori 3</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4">Kategori 4</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 5">Kategori 5</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 6">Kategori 6</a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1"><span>Kategori 1</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2"><span>Kategori 2</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3"><span>Kategori 3</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4"><span>Kategori 4</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 5"><span>Kategori 5</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 6"><span>Kategori 6</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
               </ul>
             </div>
-              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla">Se alla<i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla"><span>Se alla</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
@@ -161,13 +172,13 @@
               <div>
               <h3 class="card-title fw-bold mb-2">Stöd & omsorg</h3>
               <ul class="list-unstyled">
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1">Kategori 1</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2">Kategori 2</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3">Kategori 3</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4">Kategori 4</a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1"><span>Kategori 1</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2"><span>Kategori 2</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3"><span>Kategori 3</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4"><span>Kategori 4</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
               </ul>
             </div>
-              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla">Se alla<i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla"><span>Se alla</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
@@ -179,13 +190,13 @@
               <div>
               <h3 class="card-title fw-bold mb-2">Traffik & miljö</h3>
               <ul class="list-unstyled">
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1">Kategori 1</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2">Kategori 2</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3">Kategori 3</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4">Kategori 4</a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1"><span>Kategori 1</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2"><span>Kategori 2</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3"><span>Kategori 3</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4"><span>Kategori 4</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
               </ul>
             </div>
-              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla">Se alla<i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla"><span>Se alla</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
@@ -197,13 +208,13 @@
               <div>
               <h3 class="card-title fw-bold mb-2">Bygga & bo</h3>
               <ul class="list-unstyled">
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1">Kategori 1</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2">Kategori 2</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3">Kategori 3</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4">Kategori 4</a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1"><span>Kategori 1</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2"><span>Kategori 2</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3"><span>Kategori 3</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4"><span>Kategori 4</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
               </ul>
             </div>
-              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla">Se alla<i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla"><span>Se alla</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
@@ -216,13 +227,13 @@
               <div>
               <h3 class="card-title fw-bold mb-2">Företagare</h3>
               <ul class="list-unstyled">
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1">Kategori 1</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2">Kategori 2</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3">Kategori 3</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4">Kategori 4</a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1"><span>Kategori 1</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2"><span>Kategori 2</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3"><span>Kategori 3</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4"><span>Kategori 4</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
               </ul>
             </div>
-              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla">Se alla<i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla"><span>Se alla</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
@@ -234,13 +245,13 @@
               <div>
               <h3 class="card-title fw-bold mb-2">Jobba</h3>
               <ul class="list-unstyled">
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1">Kategori 1</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2">Kategori 2</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3">Kategori 3</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4">Kategori 4</a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1"><span>Kategori 1</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2"><span>Kategori 2</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3"><span>Kategori 3</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4"><span>Kategori 4</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
               </ul>
             </div>
-              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla">Se alla<i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla"><span>Se alla</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
@@ -252,13 +263,13 @@
               <div>
               <h3 class="card-title fw-bold mb-2">Kommun & Politik</h3>
               <ul class="list-unstyled">
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1">Kategori 1</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2">Kategori 2</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3">Kategori 3</a></li>
-                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4">Kategori 4</a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 1"><span>Kategori 1</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 2"><span>Kategori 2</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 3"><span>Kategori 3</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
+                <li class="fs-5 py-2"><a href="#" class="text-decoration-none" title="Kategori 4"><span>Kategori 4</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a></li>
               </ul>
             </div>
-              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla">Se alla<i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+              <a href="#" class="card-link fw-bold fs-5 text-decoration-none" title="Se alla"><span>Se alla</span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>

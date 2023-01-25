@@ -47,3 +47,11 @@ const autoCompleteJS = new autoComplete({
         },
     }
 });
+
+var navsearch = document.querySelectorAll(".input-nav .btn");
+navsearch.forEach(function (nav){
+    nav.addEventListener("click", function(){
+        var input = nav.closest("#search-autocomplete");
+        input.classList.toggle("open-input");
+    })
+})

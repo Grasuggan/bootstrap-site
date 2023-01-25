@@ -231,14 +231,44 @@ section.hero-section .input-group #autoComplete_list_1 a {
   height: 200px;
   object-fit: cover;
 }
-.card ul li{
-  border-top: 2px solid #a4a4a4;
-}
-.card ul li:last-child{
-  border-bottom: 2px solid #a4a4a4;
-}
 .card a:hover, .card li:hover a {
   opacity: .7;
+}
+.card ul li.fs-5 a,  .card a.card-link{
+  position: relative;
+}
+.card ul li.fs-5 a span, .card a.card-link span{
+  position: relative;
+}
+.card ul li.fs-5 a span::before {
+  content: "";
+  display: block;
+  border-bottom: 1px solid;
+  width: 100%;
+  bottom: -4px;
+  position: absolute;
+}
+.card ul li.fs-5 a i{
+  -webkit-text-stroke: 2px;
+-webkit-text-stroke-width: 2px;
+-webkit-text-stroke-color: currentcolor;
+font-size: 14px;
+margin-left: 5px;
+transform: translateX(0px);
+position: absolute;
+top: 20%;
+}
+.card ul li.fs-5 a:hover i, .card a.card-link:hover i {
+  transform: translateX(10px);
+  transition: transform .2s ease-in-out;
+}
+.card a.card-link span::before {
+  content: "";
+  display: block;
+  border-bottom: 2px solid;
+  width: 100%;
+  bottom: -3px;
+  position: absolute;
 }
 .card a.card-link i{
   -webkit-text-stroke: 2px;
@@ -246,6 +276,9 @@ section.hero-section .input-group #autoComplete_list_1 a {
   -webkit-text-stroke-color: currentcolor;
   font-size: 14px;
   margin-left: 5px;
+  transform: translateX(0px);
+  position: absolute;
+  top: 20%;
 }
 .btn-outline-altsecondary{
   border-width: 2px;
@@ -409,4 +442,29 @@ footer .list-group li img{
 }
 footer .list-group li i.bi-box-arrow-up-right{
   margin-left: 15px;
+} 
+
+//Search nav
+.input-nav #search-autocomplete {
+  display: flex;
+  height: 100%;
+  align-items: stretch;
+  position: relative;
+}
+.input-nav.input-group .btn{
+  display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+right: 0;
+}
+#autoComplete-nav.form-control{
+  width: 0;
+  // padding: 0;
+  transition: width .2s linear;
+}
+.open-input #autoComplete-nav.form-control{
+  width: 400px;
+  // padding: .375rem .75rem;
+  transition: width .2s linear;
 }
