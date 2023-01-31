@@ -39,7 +39,8 @@
 
           <div class="input-group input-nav">
             <div id="search-autocomplete" class="form-outline">
-              <input type="search" id="autoComplete-nav" class="form-control" autocomplete="off" placeholder="Sök"/>
+              <label for="autoComplete-nav" class="hidden">Sök</label>
+              <input type="search" id="autoComplete-nav" name="autoComplete-nav" class="form-control" autocomplete="off" placeholder="Sök"/>
               <button class="btn btn-primary nav-search-btn  px-4" type="button" title="Sök"><i class="bi bi-search"></i> <small class="ps-1">Sök</small></button>
             </div>
           </div>
@@ -51,7 +52,7 @@
           <span class="text-white show"><i class="bi bi-list"></i> <small class="ps-1">Meny</small></span>
           <span class="text-white"><i class="bi bi-x-circle"></i> <small class="ps-1">Stäng</small></span>
         </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
           <div class="offcanvas-body bg-secondary p-0">
             <ul class="navbar-nav text-white justify-content-end flex-grow-1 py-4">
               <li class="nav-item">
@@ -104,7 +105,8 @@
 
           <div class="input-group py-5">
             <div id="search-autocomplete" class="form-outline">
-              <input type="search" id="autoComplete" class="form-control" autocomplete="off"/>
+              <label for="autoComplete" class="hidden">Sök</label>
+              <input type="search" id="autoComplete" name="autoComplete" class="form-control" autocomplete="off"/>
               <button type="button" class="btn btn-altsecondary" title="Sök">
                 <i class="bi bi-search" aria-hidden="true"></i>
               </button>
@@ -336,7 +338,7 @@
               <div class="col-12 col-md-6 col-xl-4 bg-primary ms-xl-5 h-100 slider-min-h">
                 <div class="p-3 d-flex justify-content-center align-items-center h-100 slider-min-h">
                   <div class="text-white text-start">
-                    <h6>Uppleva & göra</h6>
+                    <p class="h6">Uppleva & göra</p>
                     <h2 class="fw-bold">Välkommen till Mellerud</h2>
                     <p>Id est enim, de quo quaerimus. Duarum enim 
                       vitarum nobis erunt instituta capienda. 
@@ -383,7 +385,7 @@
               <div class="col-12 col-md-6 col-xl-4 bg-primary ms-xl-5 h-100 slider-min-h">
                 <div class="p-3 d-flex justify-content-center align-items-center h-100 slider-min-h">
                   <div class="text-white text-start">
-                    <h6>Uppleva & göra</h6>
+                    <p class="h6">Uppleva & göra</p>
                     <h2 class="fw-bold">Välkommen till Mellerud</h2>
                     <p>Id est enim, de quo quaerimus. Duarum enim 
                       vitarum nobis erunt instituta capienda. 

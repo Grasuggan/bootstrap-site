@@ -122,7 +122,9 @@ section{
 .pre-top .nav-item .nav-link {
   color: $primary;
 }
-
+.hidden{
+  display: none;
+}
 //Hero
 section.hero-section{
   padding: 70px 0 35px 0;
