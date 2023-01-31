@@ -19,7 +19,7 @@ $nav-link-color: #ffffff;
 // Add new color map to add more colors to the theme-colors color map in _variables.scss
 $custom-theme-colors: (
     "altlight": #f2ebfa,
-    "altsecondary": #BE84A3,
+    "altsecondary": #AA7390,
     "altwhite": #ffffff,
 );
 
@@ -59,6 +59,7 @@ section{
   .nav-buttons {
     height: 100%;
     display: flex;
+    flex-grow:1;
   }
   .nav-buttons button{
     height: 100%;
@@ -210,7 +211,7 @@ section.hero-section .input-group #autoComplete_list_1 a {
   border: none;
 }
 .news-heading{
-  border-bottom: 4px solid #BE84A3;
+  border-bottom: 4px solid #AA7390;
 }
 .news-card span.h6{
   display: block;
@@ -302,7 +303,6 @@ font-size: 14px;
   min-height: 80vh;
 }
 .slider-hero__text-container {
-  // position: absolute;
   width: 100%;
   height: 100%;
   min-height: 80vh;
@@ -368,7 +368,7 @@ font-size: 14px;
 
 .calendar__date-box {
   display: block;
-  background: #BE84A3;
+  background: #AA7390;
   padding: 1rem 1.2rem 1.5rem;
   border-radius: 0 0 40px 40px;   
   font-size: 1.3rem;
@@ -449,7 +449,9 @@ footer .list-group li i.bi-box-arrow-up-right{
   display: flex;
   height: 100%;
   align-items: stretch;
+  justify-content: flex-end;
   position: relative;
+  width: 100%;
 }
 .input-nav.input-group .btn{
   display: flex;
@@ -462,9 +464,39 @@ right: 0;
   width: 0;
   // padding: 0;
   transition: width .2s linear;
+  box-shadow: inset 0 0rem .2rem #005eb8;
+border: none;
+height: 100%;
+border-radius: 3px;
 }
 .open-input #autoComplete-nav.form-control{
-  width: 400px;
-  // padding: .375rem .75rem;
-  transition: width .2s linear;
+  width: 70%;
+}
+@media only screen and (max-width: 992px){
+  .open-input #autoComplete-nav.form-control{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 772px){
+      #autoComplete-nav.form-control{
+        height: 0;
+        width: 100%;
+        position: fixed;
+        top: 140px;
+        right: 0;
+        transition: height .15s linear;
+        padding: 0 .75rem;
+      }
+      .scroll #autoComplete-nav.form-control{
+        top: 70px;
+      }
+      .open-input #autoComplete-nav.form-control {
+        height: 70px;
+        padding: .375rem .75rem;
+        transition: height .15s linear;
+      } 
+}
+
+.btn.btn-altsecondary, .btn.btn-altsecondary:hover{
+  color: white;
 }
