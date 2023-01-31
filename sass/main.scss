@@ -7,7 +7,9 @@ $border-radius: 0px;
 
 $nav-link-color: #ffffff; 
 
-// $card-color: $primary;
+// font family
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-monospace: 'Open Sans', sans-serif;
 
 
 //Import the functions & variables
@@ -37,15 +39,18 @@ section{
 .navbar{
     height: 70px;
 }
+.navbar.pre-top{
+  height: 48px;
+}
 .navbar.fixed-top{
-  top:70px;
+  top:48px;
    transition: all .08s ease-in-out;
 }
 .scroll .navbar.fixed-top{
   top:0;
 }
 #offcanvasNavbar {
-    top: 140px;
+    top: 118px;
   }
   .scroll #offcanvasNavbar {
     top: 70px;
@@ -61,8 +66,18 @@ section{
     display: flex;
     flex-grow:1;
   }
-  .nav-buttons button{
-    height: 100%;
+  @media only screen and (max-width: 992px){
+    .nav-buttons {
+    justify-content: flex-end;
+    }
+    .nav-buttons>button{
+      width: 20%;
+    }
+  }
+  @media only screen and (max-width: 778px){
+    .nav-buttons button{
+      width: 100%;
+    }
   }
   .navbar-toggler:focus-visible{
     outline: auto;
@@ -111,6 +126,9 @@ section{
 //Hero
 section.hero-section{
   padding: 70px 0 35px 0;
+}
+.p-4-2{
+  padding: 2.2rem;
 }
 section.hero-section .bg-image{
   min-height: calc(100vh - 140px);
@@ -185,8 +203,14 @@ section.hero-section .input-group #autoComplete_list_1 a {
   text-decoration: none;
   color: black;
 }
-.btn-altwhite:hover{
-  background-color: rgba(250, 250, 250, .95);
+.hero-btn-group .btn-altwhite::after{
+  content: "";
+  height: 5px;
+  width: 100%;
+  display: block;
+}
+.btn-altwhite:hover::after{
+  border-bottom: 5px solid #003B5C;
 }
 .hero-btn-group{
   flex-wrap:wrap;
@@ -241,14 +265,6 @@ section.hero-section .input-group #autoComplete_list_1 a {
 .card ul li.fs-5 a span, .card a.card-link span{
   position: relative;
 }
-.card ul li.fs-5 a span::before {
-  content: "";
-  display: block;
-  border-bottom: 1px solid;
-  width: 100%;
-  bottom: -4px;
-  position: absolute;
-}
 .card ul li.fs-5 a i{
   -webkit-text-stroke: 2px;
 -webkit-text-stroke-width: 2px;
@@ -262,14 +278,6 @@ top: 20%;
 .card ul li.fs-5 a:hover i, .card a.card-link:hover i {
   transform: translateX(10px);
   transition: transform .2s ease-in-out;
-}
-.card a.card-link span::before {
-  content: "";
-  display: block;
-  border-bottom: 2px solid;
-  width: 100%;
-  bottom: -3px;
-  position: absolute;
 }
 .card a.card-link i{
   -webkit-text-stroke: 2px;
@@ -459,6 +467,7 @@ justify-content: center;
 align-items: center;
 position: absolute;
 right: 0;
+height: 100%;
 }
 #autoComplete-nav.form-control{
   width: 0;
@@ -482,7 +491,7 @@ border-radius: 3px;
         height: 0;
         width: 100%;
         position: fixed;
-        top: 140px;
+        top: 118px;
         right: 0;
         transition: height .15s linear;
         padding: 0 .75rem;
