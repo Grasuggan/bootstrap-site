@@ -414,9 +414,12 @@ footer {
   width: 100%;
   min-height: 500px;
   height: fit-content;
+  background-color: #003B5C;
 }
 footer .bg-image {
   height: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 footer .footer-inner {
   height: 100%;
