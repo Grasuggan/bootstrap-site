@@ -20,7 +20,7 @@ $font-family-monospace: "Open Sans", sans-serif;
 // Add new color map to add more colors to the theme-colors color map in _variables.scss
 $custom-theme-colors: (
   "altlight": #f2ebfa,
-  "altsecondary": #aa7390,
+  "altsecondary": #99617E,
   "altwhite": #ffffff,
 );
 
@@ -228,9 +228,14 @@ section.hero-section .input-group #autoComplete_list_1 a {
 @media only screen and (max-width: 992px) {
   .hero-btn-group .btn {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: block;
     border-bottom: 1px solid #000000;
+  }
+  .btn-altwhite::after{
+    content: none;
+  }
+  .btn-altwhite:hover::after {
+    border-bottom: none;
   }
   .hero-btn-group .btn:last-child {
     border-bottom: none;
@@ -247,7 +252,7 @@ section.hero-section .input-group #autoComplete_list_1 a {
   border: none;
 }
 .news-heading {
-  border-bottom: 4px solid #aa7390;
+  border-bottom: 4px solid #99617E;
 }
 .news-card span.h6 {
   display: block;
@@ -281,14 +286,14 @@ section.hero-section .input-group #autoComplete_list_1 a {
   position: relative;
 }
 .card ul li.fs-5 a i {
-  -webkit-text-stroke: 2px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: currentcolor;
-  font-size: 14px;
+  // -webkit-text-stroke: 2px;
+  // -webkit-text-stroke-width: 2px;
+  // -webkit-text-stroke-color: currentcolor;
+  // font-size: 14px;
   margin-left: 5px;
   transform: translateX(0px);
   position: absolute;
-  top: 20%;
+  top: 18%;
 }
 .card ul li.fs-5 a:hover i,
 .card a.card-link:hover i {
@@ -296,10 +301,10 @@ section.hero-section .input-group #autoComplete_list_1 a {
   transition: transform 0.2s ease-in-out;
 }
 .card a.card-link i {
-  -webkit-text-stroke: 2px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: currentcolor;
-  font-size: 14px;
+  // -webkit-text-stroke: 2px;
+  // -webkit-text-stroke-width: 2px;
+  // -webkit-text-stroke-color: currentcolor;
+  // font-size: 14px;
   margin-left: 5px;
   transform: translateX(0px);
   position: absolute;
@@ -319,19 +324,41 @@ section.hero-section .input-group #autoComplete_list_1 a {
     #Slider
   ================*/
 .slider-hero .bg-image {
-  min-height: 80vh;
+  min-height: 55vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
 }
 .slider-hero .slider-min-h {
-  min-height: 80vh;
+  min-height: 55vh;
 }
 .slider-hero__text-container {
   width: 100%;
   height: 100%;
-  min-height: 80vh;
+  min-height: 55vh;
+}
+.slider-hero img {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media only screen and (max-width: 992px) {
+.slider-hero img {
+  position: relative;
+  height: 250px;
+}
+.slider-hero .bg-image, .slider-hero .slider-min-h, .slider-hero__text-container{
+  min-height: auto;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 0%;
+}
 }
 .carousel-control-prev,
 .carousel-control-next {
@@ -398,7 +425,7 @@ section.hero-section .input-group #autoComplete_list_1 a {
 
 .calendar__date-box {
   display: block;
-  background: #aa7390;
+  background: #99617E;
   padding: 1rem 1.2rem 1.5rem;
   border-radius: 0 0 40px 40px;
   font-size: 1.3rem;
@@ -463,7 +490,7 @@ footer .list-group a {
 footer .list-group li a:hover {
   opacity: 0.8;
 }
-footer .list-group li i.bi-arrow-right-circle {
+footer .list-group li i.fa-arrow-circle-o-right{
   font-size: 24px;
   margin-right: 15px;
 }
@@ -476,7 +503,7 @@ footer .footer-text-block p {
 footer .list-group li img {
   margin-right: 15px;
 }
-footer .list-group li i.bi-box-arrow-up-right {
+footer .list-group li i.fa-external-link {
   margin-left: 15px;
 }
 
